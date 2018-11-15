@@ -1,1 +1,1 @@
-# jmh-template
+# loop-benches-on-scala
