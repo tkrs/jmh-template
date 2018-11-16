@@ -33,31 +33,31 @@ class IteratorAccumulateBench extends Bench {
   def source: Iterator[Int] = Iterator.range(1, 100)
 
   @Benchmark
-  def recursiveAcc: Vector[Int] = {
+  def recursiveAcc: Int = {
     @annotation.tailrec
-    def loop(it: Iterator[Int], acc: mutable.Builder[Int, Vector[Int]]): Vector[Int] =
-      if (!it.hasNext) acc.result() else loop(it, acc += it.next)
-    loop(source, Vector.newBuilder)
+    def loop(it: Iterator[Int], acc: Int): Int =
+      if (!it.hasNext) acc else loop(it, acc + it.next)
+    loop(source, 0)
   }
 
   @Benchmark
-  def whileAcc: Vector[Int] = {
+  def whileAcc: Int = {
     val it  = source
-    val acc = Vector.newBuilder[Int]
+    var acc = 0
     while (it.hasNext) acc += it.next
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foldLeftAcc: Vector[Int] = {
-    source.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAcc: Int = {
+    source.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAcc: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAcc: Int = {
+    var acc = 0
     source.foreach(acc += _)
-    acc.result()
+    acc
   }
 }
 
@@ -67,45 +67,45 @@ class ListAccumulateBench extends Bench {
   val viewSource: SeqView[Int, List[Int]] = source.view
 
   @Benchmark
-  def recursiveAcc: Vector[Int] = {
+  def recursiveAcc: Int = {
     @annotation.tailrec
-    def loop(xs: List[Int], acc: mutable.Builder[Int, Vector[Int]]): Vector[Int] =
+    def loop(xs: List[Int], acc: Int): Int =
       xs match {
-        case h +: t => loop(t, acc += h)
-        case _      => acc.result()
+        case h +: t => loop(t, acc + h)
+        case _      => acc
       }
-    loop(source, Vector.newBuilder)
+    loop(source, 0)
   }
 
   @Benchmark
-  def foldLeftAcc: Vector[Int] = {
-    source.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAcc: Int = {
+    source.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAcc: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAcc: Int = {
+    var acc = 0
     source.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foldLeftAccByView: Vector[Int] = {
-    viewSource.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAccByView: Int = {
+    viewSource.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAccByView: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByView: Int = {
+    var acc = 0
     viewSource.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foreachAccByIter: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByIter: Int = {
+    var acc = 0
     source.iterator.foreach(acc += _)
-    acc.result()
+    acc
   }
 }
 
@@ -115,45 +115,45 @@ class VectorAccumulateBench extends Bench {
   val viewSource: SeqView[Int, Vector[Int]] = source.view
 
   @Benchmark
-  def recursiveAcc: Vector[Int] = {
+  def recursiveAcc: Int = {
     @annotation.tailrec
-    def loop(xs: Vector[Int], acc: mutable.Builder[Int, Vector[Int]]): Vector[Int] =
+    def loop(xs: Vector[Int], acc: Int): Int =
       xs match {
-        case h +: t => loop(t, acc += h)
-        case _      => acc.result()
+        case h +: t => loop(t, acc + h)
+        case _      => acc
       }
-    loop(source, Vector.newBuilder)
+    loop(source, 0)
   }
 
   @Benchmark
-  def foldLeftAcc: Vector[Int] = {
-    source.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAcc: Int = {
+    source.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAcc: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAcc: Int = {
+    var acc = 0
     source.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foldLeftAccByView: Vector[Int] = {
-    viewSource.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAccByView: Int = {
+    viewSource.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAccByView: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByView: Int = {
+    var acc = 0
     viewSource.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foreachAccByIter: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByIter: Int = {
+    var acc = 0
     source.iterator.foreach(acc += _)
-    acc.result()
+    acc
   }
 }
 
@@ -163,42 +163,42 @@ class ArrayAccumulateBench extends Bench {
   val viewSource: mutable.IndexedSeqView[Int,Array[Int]] = source.view
 
   @Benchmark
-  def recursiveAcc: Vector[Int] = {
+  def recursiveAcc: Int = {
     @annotation.tailrec
-    def loop(i: Int, xs: Array[Int], acc: mutable.Builder[Int, Vector[Int]]): Vector[Int] =
-      if (i < source.length) loop(i + 1, xs, acc += xs(i)) else acc.result()
-    loop(0, source, Vector.newBuilder)
+    def loop(i: Int, xs: Array[Int], acc: Int): Int =
+      if (i < source.length) loop(i + 1, xs, acc + xs(i)) else acc
+    loop(0, source, 0)
   }
 
   @Benchmark
-  def foldLeftAcc: Vector[Int] = {
-    source.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAcc: Int = {
+    source.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAcc: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAcc: Int = {
+    var acc = 0
     source.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foldLeftAccByView: Vector[Int] = {
-    viewSource.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAccByView: Int = {
+    viewSource.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAccByView: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByView: Int = {
+    var acc = 0
     viewSource.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foreachAccByIter: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByIter: Int = {
+    var acc = 0
     source.iterator.foreach(acc += _)
-    acc.result()
+    acc
   }
 }
 
@@ -208,33 +208,33 @@ class SetAccumulateBench extends Bench {
   val viewSource: IterableView[Int, Set[Int]] = source.view
 
   @Benchmark
-  def foldLeftAcc: Vector[Int] = {
-    source.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAcc: Int = {
+    source.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAcc: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAcc: Int = {
+    var acc = 0
     source.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foldLeftAccByView: Vector[Int] = {
-    viewSource.foldLeft(Vector.newBuilder[Int]) { case (l, r) => l += r }.result()
+  def foldLeftAccByView: Int = {
+    viewSource.foldLeft(0) { case (l, r) => l + r }
   }
 
   @Benchmark
-  def foreachAccByView: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByView: Int = {
+    var acc = 0
     viewSource.foreach(acc += _)
-    acc.result()
+    acc
   }
 
   @Benchmark
-  def foreachAccByIter: Vector[Int] = {
-    val acc = Vector.newBuilder[Int]
+  def foreachAccByIter: Int = {
+    var acc = 0
     source.iterator.foreach(acc += _)
-    acc.result()
+    acc
   }
 }

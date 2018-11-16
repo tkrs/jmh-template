@@ -1,191 +1,247 @@
-[info] Benchmark                                                                  Mode  Cnt        Score       Error   Units
-[info] ArrayAccumulateBench.foldLeftAcc                                          thrpt   20  1387310.396 ± 40892.463   ops/s
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.alloc.rate                           thrpt   20      933.647 ±    27.404  MB/sec
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                      thrpt   20      824.000 ±     0.001    B/op
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space                  thrpt   20      932.602 ±   103.800  MB/sec
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm             thrpt   20      823.240 ±    88.206    B/op
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                     thrpt   20        0.001 ±     0.001  MB/sec
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm                thrpt   20        0.001 ±     0.001    B/op
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space              thrpt   20        0.128 ±     0.234  MB/sec
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm         thrpt   20        0.114 ±     0.208    B/op
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.count                                thrpt   20       64.000              counts
-[info] ArrayAccumulateBench.foldLeftAcc:·gc.time                                 thrpt   20      155.000                  ms
-[info] ArrayAccumulateBench.foldLeftAccByView                                    thrpt   20  1039684.876 ± 13490.768   ops/s
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.alloc.rate                     thrpt   20      699.944 ±     9.109  MB/sec
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.alloc.rate.norm                thrpt   20      824.000 ±     0.001    B/op
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space            thrpt   20      699.332 ±   126.909  MB/sec
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space.norm       thrpt   20      824.189 ±   153.368    B/op
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen               thrpt   20        0.002 ±     0.005  MB/sec
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen.norm          thrpt   20        0.003 ±     0.006    B/op
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space        thrpt   20        0.100 ±     0.166  MB/sec
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space.norm   thrpt   20        0.117 ±     0.196    B/op
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.count                          thrpt   20       48.000              counts
-[info] ArrayAccumulateBench.foldLeftAccByView:·gc.time                           thrpt   20      136.000                  ms
-[info] ArrayAccumulateBench.foreachAcc                                           thrpt   20  1462324.222 ± 20439.984   ops/s
-[info] ArrayAccumulateBench.foreachAcc:·gc.alloc.rate                            thrpt   20      984.198 ±    13.746  MB/sec
-[info] ArrayAccumulateBench.foreachAcc:·gc.alloc.rate.norm                       thrpt   20      824.000 ±     0.001    B/op
-[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                   thrpt   20      976.520 ±   123.732  MB/sec
-[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm              thrpt   20      817.728 ±   103.843    B/op
-[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Old_Gen                      thrpt   20        0.004 ±     0.010  MB/sec
-[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Old_Gen.norm                 thrpt   20        0.004 ±     0.008    B/op
-[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space               thrpt   20        0.143 ±     0.234  MB/sec
-[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm          thrpt   20        0.120 ±     0.199    B/op
-[info] ArrayAccumulateBench.foreachAcc:·gc.count                                 thrpt   20       67.000              counts
-[info] ArrayAccumulateBench.foreachAcc:·gc.time                                  thrpt   20      151.000                  ms
-[info] ArrayAccumulateBench.foreachAccByIter                                     thrpt   20  1279672.158 ± 47840.215   ops/s
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.alloc.rate                      thrpt   20      877.596 ±    33.029  MB/sec
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.alloc.rate.norm                 thrpt   20      840.000 ±     0.001    B/op
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space             thrpt   20      873.430 ±    82.402  MB/sec
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space.norm        thrpt   20      835.177 ±    66.587    B/op
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Old_Gen                thrpt   20        0.002 ±     0.004  MB/sec
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Old_Gen.norm           thrpt   20        0.002 ±     0.004    B/op
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space         thrpt   20        0.128 ±     0.234  MB/sec
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space.norm    thrpt   20        0.123 ±     0.225    B/op
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.count                           thrpt   20       60.000              counts
-[info] ArrayAccumulateBench.foreachAccByIter:·gc.time                            thrpt   20      141.000                  ms
-[info] ArrayAccumulateBench.foreachAccByView                                     thrpt   20  1405555.324 ± 40335.202   ops/s
-[info] ArrayAccumulateBench.foreachAccByView:·gc.alloc.rate                      thrpt   20      945.248 ±    27.362  MB/sec
-[info] ArrayAccumulateBench.foreachAccByView:·gc.alloc.rate.norm                 thrpt   20      824.000 ±     0.001    B/op
-[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space             thrpt   20      945.679 ±   111.973  MB/sec
-[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space.norm        thrpt   20      824.493 ±    94.356    B/op
-[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Old_Gen                thrpt   20        0.002 ±     0.005  MB/sec
-[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Old_Gen.norm           thrpt   20        0.002 ±     0.004    B/op
-[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space         thrpt   20        0.100 ±     0.231  MB/sec
-[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space.norm    thrpt   20        0.086 ±     0.199    B/op
-[info] ArrayAccumulateBench.foreachAccByView:·gc.count                           thrpt   20       65.000              counts
-[info] ArrayAccumulateBench.foreachAccByView:·gc.time                            thrpt   20      165.000                  ms
-[info] ArrayAccumulateBench.recursiveAcc                                         thrpt   20  1450644.229 ± 26005.385   ops/s
-[info] ArrayAccumulateBench.recursiveAcc:·gc.alloc.rate                          thrpt   20      975.718 ±    17.395  MB/sec
-[info] ArrayAccumulateBench.recursiveAcc:·gc.alloc.rate.norm                     thrpt   20      824.000 ±     0.001    B/op
-[info] ArrayAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space                 thrpt   20      975.113 ±   123.558  MB/sec
-[info] ArrayAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space.norm            thrpt   20      823.584 ±   103.667    B/op
-[info] ArrayAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen                    thrpt   20        0.003 ±     0.006  MB/sec
-[info] ArrayAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen.norm               thrpt   20        0.003 ±     0.005    B/op
-[info] ArrayAccumulateBench.recursiveAcc:·gc.churn.G1_Survivor_Space             thrpt   20        0.128 ±     0.204  MB/sec
-[info] ArrayAccumulateBench.recursiveAcc:·gc.churn.G1_Survivor_Space.norm        thrpt   20        0.108 ±     0.173    B/op
-[info] ArrayAccumulateBench.recursiveAcc:·gc.count                               thrpt   20       67.000              counts
-[info] ArrayAccumulateBench.recursiveAcc:·gc.time                                thrpt   20      153.000                  ms
-[info] IteratorAccumulateBench.foldLeftAcc                                       thrpt   20  1003865.871 ±  9731.555   ops/s
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.alloc.rate                        thrpt   20      688.351 ±     6.835  MB/sec
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                   thrpt   20      840.000 ±     0.001    B/op
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space               thrpt   20      697.938 ±   127.454  MB/sec
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm          thrpt   20      851.912 ±   156.313    B/op
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                  thrpt   20        0.004 ±     0.011  MB/sec
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm             thrpt   20        0.005 ±     0.014    B/op
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space           thrpt   20        0.100 ±     0.201  MB/sec
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm      thrpt   20        0.122 ±     0.244    B/op
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.count                             thrpt   20       48.000              counts
-[info] IteratorAccumulateBench.foldLeftAcc:·gc.time                              thrpt   20      137.000                  ms
-[info] IteratorAccumulateBench.foreachAcc                                        thrpt   20  1957273.794 ± 28321.122   ops/s
-[info] IteratorAccumulateBench.foreachAcc:·gc.alloc.rate                         thrpt   20     1316.684 ±    19.091  MB/sec
-[info] IteratorAccumulateBench.foreachAcc:·gc.alloc.rate.norm                    thrpt   20      824.000 ±     0.001    B/op
-[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                thrpt   20     1324.353 ±   129.222  MB/sec
-[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm           thrpt   20      828.828 ±    80.205    B/op
-[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Old_Gen                   thrpt   20        0.002 ±     0.004  MB/sec
-[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Old_Gen.norm              thrpt   20        0.001 ±     0.002    B/op
-[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space            thrpt   20        0.114 ±     0.233  MB/sec
-[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm       thrpt   20        0.072 ±     0.146    B/op
-[info] IteratorAccumulateBench.foreachAcc:·gc.count                              thrpt   20       91.000              counts
-[info] IteratorAccumulateBench.foreachAcc:·gc.time                               thrpt   20      191.000                  ms
-[info] IteratorAccumulateBench.recursiveAcc                                      thrpt   20  2035503.193 ± 52999.642   ops/s
-[info] IteratorAccumulateBench.recursiveAcc:·gc.alloc.rate                       thrpt   20     1369.051 ±    35.510  MB/sec
-[info] IteratorAccumulateBench.recursiveAcc:·gc.alloc.rate.norm                  thrpt   20      824.000 ±     0.001    B/op
-[info] IteratorAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space              thrpt   20     1383.029 ±   112.089  MB/sec
-[info] IteratorAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space.norm         thrpt   20      833.239 ±    72.089    B/op
-[info] IteratorAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen                 thrpt   20        0.005 ±     0.011  MB/sec
-[info] IteratorAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen.norm            thrpt   20        0.003 ±     0.007    B/op
-[info] IteratorAccumulateBench.recursiveAcc:·gc.churn.G1_Survivor_Space          thrpt   20        0.157 ±     0.247  MB/sec
-[info] IteratorAccumulateBench.recursiveAcc:·gc.churn.G1_Survivor_Space.norm     thrpt   20        0.094 ±     0.148    B/op
-[info] IteratorAccumulateBench.recursiveAcc:·gc.count                            thrpt   20       95.000              counts
-[info] IteratorAccumulateBench.recursiveAcc:·gc.time                             thrpt   20      195.000                  ms
-[info] IteratorAccumulateBench.whileAcc                                          thrpt   20  2083221.044 ± 15201.778   ops/s
-[info] IteratorAccumulateBench.whileAcc:·gc.alloc.rate                           thrpt   20     1401.087 ±    10.441  MB/sec
-[info] IteratorAccumulateBench.whileAcc:·gc.alloc.rate.norm                      thrpt   20      824.000 ±     0.001    B/op
-[info] IteratorAccumulateBench.whileAcc:·gc.churn.G1_Eden_Space                  thrpt   20     1396.798 ±   103.395  MB/sec
-[info] IteratorAccumulateBench.whileAcc:·gc.churn.G1_Eden_Space.norm             thrpt   20      821.626 ±    61.951    B/op
-[info] IteratorAccumulateBench.whileAcc:·gc.churn.G1_Old_Gen                     thrpt   20        0.003 ±     0.006  MB/sec
-[info] IteratorAccumulateBench.whileAcc:·gc.churn.G1_Old_Gen.norm                thrpt   20        0.002 ±     0.004    B/op
-[info] IteratorAccumulateBench.whileAcc:·gc.churn.G1_Survivor_Space              thrpt   20        0.142 ±     0.234  MB/sec
-[info] IteratorAccumulateBench.whileAcc:·gc.churn.G1_Survivor_Space.norm         thrpt   20        0.084 ±     0.137    B/op
-[info] IteratorAccumulateBench.whileAcc:·gc.count                                thrpt   20       96.000              counts
-[info] IteratorAccumulateBench.whileAcc:·gc.time                                 thrpt   20      184.000                  ms
-[info] ListAccumulateBench.foldLeftAcc                                           thrpt   20  1328240.887 ± 13941.757   ops/s
-[info] ListAccumulateBench.foldLeftAcc:·gc.alloc.rate                            thrpt   20      893.472 ±     9.199  MB/sec
-[info] ListAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                       thrpt   20      824.000 ±     0.001    B/op
-[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space                   thrpt   20      872.761 ±     1.544  MB/sec
-[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm              thrpt   20      805.013 ±     8.908    B/op
-[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                      thrpt   20        0.004 ±     0.008  MB/sec
-[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm                 thrpt   20        0.004 ±     0.008    B/op
-[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space               thrpt   20        0.114 ±     0.203  MB/sec
-[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm          thrpt   20        0.105 ±     0.188    B/op
-[info] ListAccumulateBench.foldLeftAcc:·gc.count                                 thrpt   20       60.000              counts
-[info] ListAccumulateBench.foldLeftAcc:·gc.time                                  thrpt   20      149.000                  ms
-[info] ListAccumulateBench.foldLeftAccByView                                     thrpt   20   971100.044 ± 12048.950   ops/s
-[info] ListAccumulateBench.foldLeftAccByView:·gc.alloc.rate                      thrpt   20      697.426 ±     8.753  MB/sec
-[info] ListAccumulateBench.foldLeftAccByView:·gc.alloc.rate.norm                 thrpt   20      880.000 ±     0.001    B/op
-[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space             thrpt   20      697.794 ±   126.710  MB/sec
-[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space.norm        thrpt   20      880.665 ±   160.387    B/op
-[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen                thrpt   20        0.004 ±     0.006  MB/sec
-[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen.norm           thrpt   20        0.005 ±     0.008    B/op
-[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space         thrpt   20        0.114 ±     0.233  MB/sec
-[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space.norm    thrpt   20        0.146 ±     0.296    B/op
-[info] ListAccumulateBench.foldLeftAccByView:·gc.count                           thrpt   20       48.000              counts
-[info] ListAccumulateBench.foldLeftAccByView:·gc.time                            thrpt   20      146.000                  ms
-[info] ListAccumulateBench.foreachAcc                                            thrpt   20  1818061.633 ± 32745.775   ops/s
-[info] ListAccumulateBench.foreachAcc:·gc.alloc.rate                             thrpt   20     1222.928 ±    22.000  MB/sec
-[info] ListAccumulateBench.foreachAcc:·gc.alloc.rate.norm                        thrpt   20      824.000 ±     0.001    B/op
-[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                    thrpt   20     1208.126 ±    92.891  MB/sec
-[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm               thrpt   20      814.277 ±    63.279    B/op
-[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Old_Gen                       thrpt   20        0.001 ±     0.001  MB/sec
-[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Old_Gen.norm                  thrpt   20        0.001 ±     0.001    B/op
-[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space                thrpt   20        0.114 ±     0.271  MB/sec
-[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm           thrpt   20        0.076 ±     0.181    B/op
-[info] ListAccumulateBench.foreachAcc:·gc.count                                  thrpt   20       83.000              counts
-[info] ListAccumulateBench.foreachAcc:·gc.time                                   thrpt   20      182.000                  ms
-[info] ListAccumulateBench.foreachAccByIter                                      thrpt   20  1192363.168 ± 15603.579   ops/s
-[info] ListAccumulateBench.foreachAccByIter:·gc.alloc.rate                       thrpt   20      801.878 ±    10.457  MB/sec
-[info] ListAccumulateBench.foreachAccByIter:·gc.alloc.rate.norm                  thrpt   20      824.000 ±     0.001    B/op
-[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space              thrpt   20      814.382 ±   103.947  MB/sec
-[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space.norm         thrpt   20      836.551 ±   104.914    B/op
-[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Old_Gen                 thrpt   20        0.002 ±     0.003  MB/sec
-[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Old_Gen.norm            thrpt   20        0.002 ±     0.003    B/op
-[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space          thrpt   20        0.100 ±     0.231  MB/sec
-[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space.norm     thrpt   20        0.102 ±     0.235    B/op
-[info] ListAccumulateBench.foreachAccByIter:·gc.count                            thrpt   20       56.000              counts
-[info] ListAccumulateBench.foreachAccByIter:·gc.time                             thrpt   20      144.000                  ms
-[info] ListAccumulateBench.foreachAccByView                                      thrpt   20   845890.724 ± 41109.634   ops/s
-[info] ListAccumulateBench.foreachAccByView:·gc.alloc.rate                       thrpt   20      579.873 ±    28.121  MB/sec
-[info] ListAccumulateBench.foreachAccByView:·gc.alloc.rate.norm                  thrpt   20      840.000 ±     0.001    B/op
-[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space              thrpt   20      566.754 ±    99.754  MB/sec
-[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space.norm         thrpt   20      816.034 ±   124.988    B/op
-[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Old_Gen                 thrpt   20        0.002 ±     0.004  MB/sec
-[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Old_Gen.norm            thrpt   20        0.003 ±     0.007    B/op
-[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space          thrpt   20        0.085 ±     0.198  MB/sec
-[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space.norm     thrpt   20        0.121 ±     0.281    B/op
-[info] ListAccumulateBench.foreachAccByView:·gc.count                            thrpt   20       39.000              counts
-[info] ListAccumulateBench.foreachAccByView:·gc.time                             thrpt   20      133.000                  ms
-[info] ListAccumulateBench.recursiveAcc                                          thrpt   20   572269.669 ± 22136.113   ops/s
-[info] ListAccumulateBench.recursiveAcc:·gc.alloc.rate                           thrpt   20     2233.606 ±    86.324  MB/sec
-[info] ListAccumulateBench.recursiveAcc:·gc.alloc.rate.norm                      thrpt   20     4784.000 ±     0.001    B/op
-[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space                  thrpt   20     2241.407 ±   119.289  MB/sec
-[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space.norm             thrpt   20     4805.346 ±   254.975    B/op
-[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen                     thrpt   20        0.005 ±     0.011  MB/sec
-[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen.norm                thrpt   20        0.012 ±     0.024    B/op
-[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Survivor_Space              thrpt   20        0.100 ±     0.269  MB/sec
-[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Survivor_Space.norm         thrpt   20        0.217 ±     0.584    B/op
-[info] ListAccumulateBench.recursiveAcc:·gc.count                                thrpt   20      154.000              counts
-[info] ListAccumulateBench.recursiveAcc:·gc.time                                 thrpt   20      251.000                  ms
-[info] SetAccumulateBench.foldLeftAcc                                            thrpt   20   764005.526 ± 17453.443   ops/s
-[info] SetAccumulateBench.foldLeftAcc:·gc.alloc.rate                             thrpt   20      538.679 ±    12.368  MB/sec
-[info] SetAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                        thrpt   20      864.000 ±     0.001    B/op
-[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space                    thrpt   20      522.937 ±   103.483  MB/sec
-[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm               thrpt   20      839.943 ±   169.226    B/op
-[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                       thrpt   20        0.004 ±     0.012  MB/sec
-[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm                  thrpt   20        0.007 ±     0.018    B/op
-[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space                thrpt   20        0.128 ±     0.204  MB/sec
-[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm           thrpt   20        0.204 ±     0.325    B/op
-[info] SetAccumulateBench.foldLeftAcc:·gc.count                                  thrpt   20       36.000              counts
-[info] SetAccumulateBench.foldLeftAcc:·gc.time                                   thrpt   20      121.000                  ms
-[info] SetAccumulateBench.foldLeftAccByView                                      thrpt   20   467729.996 ±  9194.045   ops/s
-[info] SetAccumulateBench.foldLeftAccByView:·gc.alloc.rate                       thrpt   20      375.686 ±     7.421  MB/sec
-[info] SetAccumulateBench.foldLeftAccByView:·gc.alloc.rate.norm                  thrpt   20      984.000 ±     0.001    B/op
+[info] Benchmark                                                                  Mode  Cnt         Score        Error   Units
+[info] ArrayAccumulateBench.foldLeftAcc                                          thrpt   20   2195994.399 ±  49143.363   ops/s
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.alloc.rate                           thrpt   20      2410.550 ±     53.566  MB/sec
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                      thrpt   20      1344.000 ±      0.001    B/op
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space                  thrpt   20      2406.640 ±    112.894  MB/sec
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm             thrpt   20      1341.934 ±     56.575    B/op
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                     thrpt   20         0.004 ±      0.009  MB/sec
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm                thrpt   20         0.002 ±      0.005    B/op
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space              thrpt   20         0.100 ±      0.270  MB/sec
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm         thrpt   20         0.055 ±      0.150    B/op
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.count                                thrpt   20       165.000               counts
+[info] ArrayAccumulateBench.foldLeftAcc:·gc.time                                 thrpt   20       250.000                   ms
+[info] ArrayAccumulateBench.foldLeftAccByView                                    thrpt   20   1870960.394 ±  34319.059   ops/s
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.alloc.rate                     thrpt   20      2054.234 ±     37.337  MB/sec
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.alloc.rate.norm                thrpt   20      1344.000 ±      0.001    B/op
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space            thrpt   20      2042.307 ±     81.208  MB/sec
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space.norm       thrpt   20      1336.222 ±     48.917    B/op
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen               thrpt   20         0.005 ±      0.011  MB/sec
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen.norm          thrpt   20         0.004 ±      0.007    B/op
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space        thrpt   20         0.086 ±      0.229  MB/sec
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space.norm   thrpt   20         0.056 ±      0.148    B/op
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.count                          thrpt   20       140.000               counts
+[info] ArrayAccumulateBench.foldLeftAccByView:·gc.time                           thrpt   20       218.000                   ms
+[info] ArrayAccumulateBench.foreachAcc                                           thrpt   20  12906623.743 ± 260803.555   ops/s
+[info] ArrayAccumulateBench.foreachAcc:·gc.alloc.rate                            thrpt   20       168.656 ±      3.406  MB/sec
+[info] ArrayAccumulateBench.foreachAcc:·gc.alloc.rate.norm                       thrpt   20        16.000 ±      0.001    B/op
+[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                   thrpt   20       174.582 ±    126.996  MB/sec
+[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm              thrpt   20        16.613 ±     12.098    B/op
+[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space               thrpt   20         0.043 ±      0.091  MB/sec
+[info] ArrayAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm          thrpt   20         0.004 ±      0.009    B/op
+[info] ArrayAccumulateBench.foreachAcc:·gc.count                                 thrpt   20        12.000               counts
+[info] ArrayAccumulateBench.foreachAcc:·gc.time                                  thrpt   20        48.000                   ms
+[info] ArrayAccumulateBench.foreachAccByIter                                     thrpt   20  11757076.323 ± 612180.940   ops/s
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.alloc.rate                      thrpt   20       307.137 ±     15.967  MB/sec
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.alloc.rate.norm                 thrpt   20        32.000 ±      0.001    B/op
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space             thrpt   20       319.515 ±     77.483  MB/sec
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space.norm        thrpt   20        33.354 ±      7.928    B/op
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space         thrpt   20         0.057 ±      0.129  MB/sec
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space.norm    thrpt   20         0.006 ±      0.013    B/op
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.count                           thrpt   20        22.000               counts
+[info] ArrayAccumulateBench.foreachAccByIter:·gc.time                            thrpt   20        87.000                   ms
+[info] ArrayAccumulateBench.foreachAccByView                                     thrpt   20  12243694.754 ± 434033.074   ops/s
+[info] ArrayAccumulateBench.foreachAccByView:·gc.alloc.rate                      thrpt   20       159.912 ±      5.652  MB/sec
+[info] ArrayAccumulateBench.foreachAccByView:·gc.alloc.rate.norm                 thrpt   20        16.000 ±      0.001    B/op
+[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space             thrpt   20       174.299 ±    126.791  MB/sec
+[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space.norm        thrpt   20        17.525 ±     12.779    B/op
+[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space         thrpt   20         0.029 ±      0.076  MB/sec
+[info] ArrayAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space.norm    thrpt   20         0.003 ±      0.008    B/op
+[info] ArrayAccumulateBench.foreachAccByView:·gc.count                           thrpt   20        12.000               counts
+[info] ArrayAccumulateBench.foreachAccByView:·gc.time                            thrpt   20        49.000                   ms
+[info] ArrayAccumulateBench.recursiveAcc                                         thrpt   20  27755011.439 ± 317254.420   ops/s
+[info] ArrayAccumulateBench.recursiveAcc:·gc.alloc.rate                          thrpt   20        ≈ 10⁻⁴               MB/sec
+[info] ArrayAccumulateBench.recursiveAcc:·gc.alloc.rate.norm                     thrpt   20        ≈ 10⁻⁵                 B/op
+[info] ArrayAccumulateBench.recursiveAcc:·gc.count                               thrpt   20           ≈ 0               counts
+[info] IteratorAccumulateBench.foldLeftAcc                                       thrpt   20   1482647.297 ±  69421.807   ops/s
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.alloc.rate                        thrpt   20      1645.311 ±     76.885  MB/sec
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                   thrpt   20      1360.000 ±      0.001    B/op
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space               thrpt   20      1659.482 ±    119.043  MB/sec
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm          thrpt   20      1373.807 ±     99.423    B/op
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                  thrpt   20         0.004 ±      0.007  MB/sec
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm             thrpt   20         0.003 ±      0.006    B/op
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space           thrpt   20         0.114 ±      0.232  MB/sec
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm      thrpt   20         0.095 ±      0.190    B/op
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.count                             thrpt   20       114.000               counts
+[info] IteratorAccumulateBench.foldLeftAcc:·gc.time                              thrpt   20       199.000                   ms
+[info] IteratorAccumulateBench.foreachAcc                                        thrpt   20  16019962.127 ± 489778.755   ops/s
+[info] IteratorAccumulateBench.foreachAcc:·gc.alloc.rate                         thrpt   20       209.184 ±      6.442  MB/sec
+[info] IteratorAccumulateBench.foreachAcc:·gc.alloc.rate.norm                    thrpt   20        16.000 ±      0.001    B/op
+[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                thrpt   20       203.346 ±    118.600  MB/sec
+[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm           thrpt   20        15.478 ±      9.041    B/op
+[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space            thrpt   20         0.057 ±      0.101  MB/sec
+[info] IteratorAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm       thrpt   20         0.004 ±      0.008    B/op
+[info] IteratorAccumulateBench.foreachAcc:·gc.count                              thrpt   20        14.000               counts
+[info] IteratorAccumulateBench.foreachAcc:·gc.time                               thrpt   20        57.000                   ms
+[info] IteratorAccumulateBench.recursiveAcc                                      thrpt   20  23727014.282 ± 757553.526   ops/s
+[info] IteratorAccumulateBench.recursiveAcc:·gc.alloc.rate                       thrpt   20        ≈ 10⁻⁴               MB/sec
+[info] IteratorAccumulateBench.recursiveAcc:·gc.alloc.rate.norm                  thrpt   20        ≈ 10⁻⁵                 B/op
+[info] IteratorAccumulateBench.recursiveAcc:·gc.count                            thrpt   20           ≈ 0               counts
+[info] IteratorAccumulateBench.whileAcc                                          thrpt   20  23824601.304 ± 274298.200   ops/s
+[info] IteratorAccumulateBench.whileAcc:·gc.alloc.rate                           thrpt   20        ≈ 10⁻⁴               MB/sec
+[info] IteratorAccumulateBench.whileAcc:·gc.alloc.rate.norm                      thrpt   20        ≈ 10⁻⁵                 B/op
+[info] IteratorAccumulateBench.whileAcc:·gc.count                                thrpt   20           ≈ 0               counts
+[info] ListAccumulateBench.foldLeftAcc                                           thrpt   20   2783931.589 ± 111789.021   ops/s
+[info] ListAccumulateBench.foldLeftAcc:·gc.alloc.rate                            thrpt   20      3053.743 ±    122.248  MB/sec
+[info] ListAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                       thrpt   20      1344.000 ±      0.001    B/op
+[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space                   thrpt   20      3044.356 ±    192.185  MB/sec
+[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm              thrpt   20      1339.231 ±     56.656    B/op
+[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                      thrpt   20         0.005 ±      0.010  MB/sec
+[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm                 thrpt   20         0.002 ±      0.004    B/op
+[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space               thrpt   20         0.043 ±      0.166  MB/sec
+[info] ListAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm          thrpt   20         0.019 ±      0.074    B/op
+[info] ListAccumulateBench.foldLeftAcc:·gc.count                                 thrpt   20       209.000               counts
+[info] ListAccumulateBench.foldLeftAcc:·gc.time                                  thrpt   20       299.000                   ms
+[info] ListAccumulateBench.foldLeftAccByView                                     thrpt   20    941389.471 ±  10590.187   ops/s
+[info] ListAccumulateBench.foldLeftAccByView:·gc.alloc.rate                      thrpt   20      1075.826 ±     12.161  MB/sec
+[info] ListAccumulateBench.foldLeftAccByView:·gc.alloc.rate.norm                 thrpt   20      1400.000 ±      0.001    B/op
+[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space             thrpt   20      1077.045 ±    118.692  MB/sec
+[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space.norm        thrpt   20      1401.765 ±    154.927    B/op
+[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen                thrpt   20         0.005 ±      0.011  MB/sec
+[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen.norm           thrpt   20         0.006 ±      0.014    B/op
+[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space         thrpt   20         0.128 ±      0.247  MB/sec
+[info] ListAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space.norm    thrpt   20         0.169 ±      0.326    B/op
+[info] ListAccumulateBench.foldLeftAccByView:·gc.count                           thrpt   20        74.000               counts
+[info] ListAccumulateBench.foldLeftAccByView:·gc.time                            thrpt   20       163.000                   ms
+[info] ListAccumulateBench.foreachAcc                                            thrpt   20   4363253.994 ±  52338.397   ops/s
+[info] ListAccumulateBench.foreachAcc:·gc.alloc.rate                             thrpt   20        56.992 ±      0.680  MB/sec
+[info] ListAccumulateBench.foreachAcc:·gc.alloc.rate.norm                        thrpt   20        16.000 ±      0.001    B/op
+[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                    thrpt   20        58.072 ±    103.475  MB/sec
+[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm               thrpt   20        16.454 ±     29.327    B/op
+[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space                thrpt   20         0.043 ±      0.121  MB/sec
+[info] ListAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm           thrpt   20         0.012 ±      0.034    B/op
+[info] ListAccumulateBench.foreachAcc:·gc.count                                  thrpt   20         4.000               counts
+[info] ListAccumulateBench.foreachAcc:·gc.time                                   thrpt   20        18.000                   ms
+[info] ListAccumulateBench.foreachAccByIter                                      thrpt   20   4896909.171 ±  43483.697   ops/s
+[info] ListAccumulateBench.foreachAccByIter:·gc.alloc.rate                       thrpt   20        63.934 ±      0.571  MB/sec
+[info] ListAccumulateBench.foreachAccByIter:·gc.alloc.rate.norm                  thrpt   20        16.000 ±      0.001    B/op
+[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space              thrpt   20        58.141 ±    103.598  MB/sec
+[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space.norm         thrpt   20        14.546 ±     25.919    B/op
+[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space          thrpt   20         0.043 ±      0.121  MB/sec
+[info] ListAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space.norm     thrpt   20         0.011 ±      0.030    B/op
+[info] ListAccumulateBench.foreachAccByIter:·gc.count                            thrpt   20         4.000               counts
+[info] ListAccumulateBench.foreachAccByIter:·gc.time                             thrpt   20        20.000                   ms
+[info] ListAccumulateBench.foreachAccByView                                      thrpt   20   3320488.390 ±  67403.005   ops/s
+[info] ListAccumulateBench.foreachAccByView:·gc.alloc.rate                       thrpt   20        86.704 ±      1.755  MB/sec
+[info] ListAccumulateBench.foreachAccByView:·gc.alloc.rate.norm                  thrpt   20        32.000 ±      0.001    B/op
+[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space              thrpt   20        87.238 ±    118.723  MB/sec
+[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space.norm         thrpt   20        32.418 ±     44.138    B/op
+[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space          thrpt   20         0.057 ±      0.152  MB/sec
+[info] ListAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space.norm     thrpt   20         0.021 ±      0.056    B/op
+[info] ListAccumulateBench.foreachAccByView:·gc.count                            thrpt   20         6.000               counts
+[info] ListAccumulateBench.foreachAccByView:·gc.time                             thrpt   20        27.000                   ms
+[info] ListAccumulateBench.recursiveAcc                                          thrpt   20    932330.963 ±  18861.173   ops/s
+[info] ListAccumulateBench.recursiveAcc:·gc.alloc.rate                           thrpt   20      3014.518 ±     61.289  MB/sec
+[info] ListAccumulateBench.recursiveAcc:·gc.alloc.rate.norm                      thrpt   20      3960.000 ±      0.001    B/op
+[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space                  thrpt   20      3002.022 ±    120.943  MB/sec
+[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space.norm             thrpt   20      3943.898 ±    141.940    B/op
+[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen                     thrpt   20         0.003 ±      0.006  MB/sec
+[info] ListAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen.norm                thrpt   20         0.004 ±      0.008    B/op
+[info] ListAccumulateBench.recursiveAcc:·gc.count                                thrpt   20       206.000               counts
+[info] ListAccumulateBench.recursiveAcc:·gc.time                                 thrpt   20       280.000                   ms
+[info] SetAccumulateBench.foldLeftAcc                                            thrpt   20    500963.773 ±   8313.176   ops/s
+[info] SetAccumulateBench.foldLeftAcc:·gc.alloc.rate                             thrpt   20      1893.504 ±     31.700  MB/sec
+[info] SetAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                        thrpt   20      4632.000 ±      0.001    B/op
+[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space                    thrpt   20      1891.903 ±    129.522  MB/sec
+[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm               thrpt   20      4628.905 ±    316.538    B/op
+[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                       thrpt   20         0.008 ±      0.018  MB/sec
+[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm                  thrpt   20         0.019 ±      0.044    B/op
+[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space                thrpt   20         0.085 ±      0.198  MB/sec
+[info] SetAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm           thrpt   20         0.213 ±      0.495    B/op
+[info] SetAccumulateBench.foldLeftAcc:·gc.count                                  thrpt   20       130.000               counts
+[info] SetAccumulateBench.foldLeftAcc:·gc.time                                   thrpt   20       221.000                   ms
+[info] SetAccumulateBench.foldLeftAccByView                                      thrpt   20    567245.771 ±   9733.938   ops/s
+[info] SetAccumulateBench.foldLeftAccByView:·gc.alloc.rate                       thrpt   20       807.250 ±     13.773  MB/sec
+[info] SetAccumulateBench.foldLeftAccByView:·gc.alloc.rate.norm                  thrpt   20      1744.000 ±      0.001    B/op
+[info] SetAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space              thrpt   20       814.356 ±    103.753  MB/sec
+[info] SetAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space.norm         thrpt   20      1758.812 ±    220.282    B/op
+[info] SetAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen                 thrpt   20         0.004 ±      0.006  MB/sec
+[info] SetAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen.norm            thrpt   20         0.008 ±      0.013    B/op
+[info] SetAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space          thrpt   20         0.128 ±      0.234  MB/sec
+[info] SetAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space.norm     thrpt   20         0.274 ±      0.499    B/op
+[info] SetAccumulateBench.foldLeftAccByView:·gc.count                            thrpt   20        56.000               counts
+[info] SetAccumulateBench.foldLeftAccByView:·gc.time                             thrpt   20       141.000                   ms
+[info] SetAccumulateBench.foreachAcc                                             thrpt   20   2961662.720 ±  73384.473   ops/s
+[info] SetAccumulateBench.foreachAcc:·gc.alloc.rate                              thrpt   20        77.365 ±      1.924  MB/sec
+[info] SetAccumulateBench.foreachAcc:·gc.alloc.rate.norm                         thrpt   20        32.000 ±      0.001    B/op
+[info] SetAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                     thrpt   20        87.192 ±    118.660  MB/sec
+[info] SetAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm                thrpt   20        35.723 ±     48.616    B/op
+[info] SetAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space                 thrpt   20         0.057 ±      0.152  MB/sec
+[info] SetAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm            thrpt   20         0.023 ±      0.062    B/op
+[info] SetAccumulateBench.foreachAcc:·gc.count                                   thrpt   20         6.000               counts
+[info] SetAccumulateBench.foreachAcc:·gc.time                                    thrpt   20        26.000                   ms
+[info] SetAccumulateBench.foreachAccByIter                                       thrpt   20    961693.448 ±  23077.887   ops/s
+[info] SetAccumulateBench.foreachAccByIter:·gc.alloc.rate                        thrpt   20       106.758 ±      2.563  MB/sec
+[info] SetAccumulateBench.foreachAccByIter:·gc.alloc.rate.norm                   thrpt   20       136.000 ±      0.001    B/op
+[info] SetAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space               thrpt   20       116.208 ±    126.800  MB/sec
+[info] SetAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space.norm          thrpt   20       148.271 ±    161.870    B/op
+[info] SetAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space           thrpt   20         0.071 ±      0.158  MB/sec
+[info] SetAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space.norm      thrpt   20         0.091 ±      0.202    B/op
+[info] SetAccumulateBench.foreachAccByIter:·gc.count                             thrpt   20         8.000               counts
+[info] SetAccumulateBench.foreachAccByIter:·gc.time                              thrpt   20        36.000                   ms
+[info] SetAccumulateBench.foreachAccByView                                       thrpt   20    940752.270 ±  14218.801   ops/s
+[info] SetAccumulateBench.foreachAccByView:·gc.alloc.rate                        thrpt   20       104.396 ±      1.567  MB/sec
+[info] SetAccumulateBench.foreachAccByView:·gc.alloc.rate.norm                   thrpt   20       136.000 ±      0.001    B/op
+[info] SetAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space               thrpt   20       116.211 ±    126.804  MB/sec
+[info] SetAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space.norm          thrpt   20       152.152 ±    166.037    B/op
+[info] SetAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space           thrpt   20         0.057 ±      0.152  MB/sec
+[info] SetAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space.norm      thrpt   20         0.074 ±      0.198    B/op
+[info] SetAccumulateBench.foreachAccByView:·gc.count                             thrpt   20         8.000               counts
+[info] SetAccumulateBench.foreachAccByView:·gc.time                              thrpt   20        36.000                   ms
+[info] VectorAccumulateBench.foldLeftAcc                                         thrpt   20   1015624.533 ±  22904.531   ops/s
+[info] VectorAccumulateBench.foldLeftAcc:·gc.alloc.rate                          thrpt   20      1200.255 ±     27.420  MB/sec
+[info] VectorAccumulateBench.foldLeftAcc:·gc.alloc.rate.norm                     thrpt   20      1448.000 ±      0.001    B/op
+[info] VectorAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space                 thrpt   20      1207.716 ±     92.104  MB/sec
+[info] VectorAccumulateBench.foldLeftAcc:·gc.churn.G1_Eden_Space.norm            thrpt   20      1457.483 ±    110.060    B/op
+[info] VectorAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen                    thrpt   20         0.004 ±      0.007  MB/sec
+[info] VectorAccumulateBench.foldLeftAcc:·gc.churn.G1_Old_Gen.norm               thrpt   20         0.005 ±      0.008    B/op
+[info] VectorAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space             thrpt   20         0.128 ±      0.234  MB/sec
+[info] VectorAccumulateBench.foldLeftAcc:·gc.churn.G1_Survivor_Space.norm        thrpt   20         0.154 ±      0.279    B/op
+[info] VectorAccumulateBench.foldLeftAcc:·gc.count                               thrpt   20        83.000               counts
+[info] VectorAccumulateBench.foldLeftAcc:·gc.time                                thrpt   20       169.000                   ms
+[info] VectorAccumulateBench.foldLeftAccByView                                   thrpt   20   1004582.568 ±  36729.617   ops/s
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.alloc.rate                    thrpt   20      1187.251 ±     43.528  MB/sec
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.alloc.rate.norm               thrpt   20      1448.000 ±      0.001    B/op
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space           thrpt   20      1193.426 ±     77.918  MB/sec
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.churn.G1_Eden_Space.norm      thrpt   20      1457.516 ±    101.849    B/op
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen              thrpt   20         0.004 ±      0.011  MB/sec
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.churn.G1_Old_Gen.norm         thrpt   20         0.005 ±      0.013    B/op
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space       thrpt   20         0.128 ±      0.233  MB/sec
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.churn.G1_Survivor_Space.norm  thrpt   20         0.153 ±      0.279    B/op
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.count                         thrpt   20        82.000               counts
+[info] VectorAccumulateBench.foldLeftAccByView:·gc.time                          thrpt   20       169.000                   ms
+[info] VectorAccumulateBench.foreachAcc                                          thrpt   20   3607195.996 ± 113449.632   ops/s
+[info] VectorAccumulateBench.foreachAcc:·gc.alloc.rate                           thrpt   20       235.724 ±      7.411  MB/sec
+[info] VectorAccumulateBench.foreachAcc:·gc.alloc.rate.norm                      thrpt   20        80.000 ±      0.001    B/op
+[info] VectorAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space                  thrpt   20       232.641 ±    103.632  MB/sec
+[info] VectorAccumulateBench.foreachAcc:·gc.churn.G1_Eden_Space.norm             thrpt   20        78.396 ±     34.948    B/op
+[info] VectorAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space              thrpt   20         0.128 ±      0.188  MB/sec
+[info] VectorAccumulateBench.foreachAcc:·gc.churn.G1_Survivor_Space.norm         thrpt   20         0.043 ±      0.064    B/op
+[info] VectorAccumulateBench.foreachAcc:·gc.count                                thrpt   20        16.000               counts
+[info] VectorAccumulateBench.foreachAcc:·gc.time                                 thrpt   20        64.000                   ms
+[info] VectorAccumulateBench.foreachAccByIter                                    thrpt   20   3646640.138 ±  51938.982   ops/s
+[info] VectorAccumulateBench.foreachAccByIter:·gc.alloc.rate                     thrpt   20       238.272 ±      3.407  MB/sec
+[info] VectorAccumulateBench.foreachAccByIter:·gc.alloc.rate.norm                thrpt   20        80.000 ±      0.001    B/op
+[info] VectorAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space            thrpt   20       232.620 ±    103.622  MB/sec
+[info] VectorAccumulateBench.foreachAccByIter:·gc.churn.G1_Eden_Space.norm       thrpt   20        78.127 ±     34.826    B/op
+[info] VectorAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space        thrpt   20         0.100 ±      0.185  MB/sec
+[info] VectorAccumulateBench.foreachAccByIter:·gc.churn.G1_Survivor_Space.norm   thrpt   20         0.033 ±      0.062    B/op
+[info] VectorAccumulateBench.foreachAccByIter:·gc.count                          thrpt   20        16.000               counts
+[info] VectorAccumulateBench.foreachAccByIter:·gc.time                           thrpt   20        66.000                   ms
+[info] VectorAccumulateBench.foreachAccByView                                    thrpt   20   3660679.907 ±  29819.001   ops/s
+[info] VectorAccumulateBench.foreachAccByView:·gc.alloc.rate                     thrpt   20       239.158 ±      1.945  MB/sec
+[info] VectorAccumulateBench.foreachAccByView:·gc.alloc.rate.norm                thrpt   20        80.000 ±      0.001    B/op
+[info] VectorAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space            thrpt   20       232.649 ±    103.635  MB/sec
+[info] VectorAccumulateBench.foreachAccByView:·gc.churn.G1_Eden_Space.norm       thrpt   20        77.890 ±     34.705    B/op
+[info] VectorAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space        thrpt   20         0.100 ±      0.166  MB/sec
+[info] VectorAccumulateBench.foreachAccByView:·gc.churn.G1_Survivor_Space.norm   thrpt   20         0.033 ±      0.056    B/op
+[info] VectorAccumulateBench.foreachAccByView:·gc.count                          thrpt   20        16.000               counts
+[info] VectorAccumulateBench.foreachAccByView:·gc.time                           thrpt   20        63.000                   ms
+[info] VectorAccumulateBench.recursiveAcc                                        thrpt   20    163659.988 ±   4572.788   ops/s
+[info] VectorAccumulateBench.recursiveAcc:·gc.alloc.rate                         thrpt   20      4455.978 ±    124.309  MB/sec
+[info] VectorAccumulateBench.recursiveAcc:·gc.alloc.rate.norm                    thrpt   20     33352.001 ±      0.001    B/op
+[info] VectorAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space                thrpt   20      4459.730 ±    119.066  MB/sec
+[info] VectorAccumulateBench.recursiveAcc:·gc.churn.G1_Eden_Space.norm           thrpt   20     33402.334 ±   1034.480    B/op
+[info] VectorAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen                   thrpt   20         0.002 ±      0.001  MB/sec
+[info] VectorAccumulateBench.recursiveAcc:·gc.churn.G1_Old_Gen.norm              thrpt   20         0.014 ±      0.004    B/op
+[info] VectorAccumulateBench.recursiveAcc:·gc.count                              thrpt   20       306.000               counts
+[info] VectorAccumulateBench.recursiveAcc:·gc.time                               thrpt   20       429.000                   ms
