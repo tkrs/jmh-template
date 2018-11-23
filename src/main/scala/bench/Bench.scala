@@ -28,9 +28,14 @@ import scala.collection.{mutable, SeqView, IterableView}
 )
 abstract class Bench
 
-class IteratorAccumulateBench extends Bench {
+trait Input { self: Bench =>
+  @Param(Array("10", "100", "500"))
+  var size: Int = _
+}
 
-  def source: Iterator[Int] = Iterator.range(1, 100)
+class IteratorAccumulateBench extends Bench with Input {
+
+  def source: Iterator[Int] = Iterator.range(1, size)
 
   @Benchmark
   def recursiveAcc: Int = {
@@ -61,10 +66,10 @@ class IteratorAccumulateBench extends Bench {
   }
 }
 
-class ListAccumulateBench extends Bench {
+class ListAccumulateBench extends Bench with Input {
 
-  val source: List[Int] = List.range(1, 100)
-  val viewSource: SeqView[Int, List[Int]] = source.view
+  lazy val source: List[Int] = List.range(1, size)
+  lazy val viewSource: SeqView[Int, List[Int]] = source.view
 
   @Benchmark
   def recursiveAcc: Int = {
@@ -109,10 +114,10 @@ class ListAccumulateBench extends Bench {
   }
 }
 
-class VectorAccumulateBench extends Bench {
+class VectorAccumulateBench extends Bench with Input {
 
-  val source: Vector[Int] = Vector.range(1, 100)
-  val viewSource: SeqView[Int, Vector[Int]] = source.view
+  lazy val source: Vector[Int] = Vector.range(1, size)
+  lazy val viewSource: SeqView[Int, Vector[Int]] = source.view
 
   @Benchmark
   def recursiveAcc: Int = {
@@ -157,10 +162,10 @@ class VectorAccumulateBench extends Bench {
   }
 }
 
-class ArrayAccumulateBench extends Bench {
+class ArrayAccumulateBench extends Bench with Input {
 
-  val source: Array[Int] = Array.range(1, 100)
-  val viewSource: mutable.IndexedSeqView[Int,Array[Int]] = source.view
+  lazy val source: Array[Int] = Array.range(1, size)
+  lazy val viewSource: mutable.IndexedSeqView[Int,Array[Int]] = source.view
 
   @Benchmark
   def recursiveAcc: Int = {
@@ -202,10 +207,10 @@ class ArrayAccumulateBench extends Bench {
   }
 }
 
-class SetAccumulateBench extends Bench {
+class SetAccumulateBench extends Bench with Input {
 
-  val source: Set[Int] = (1 to 100).toSet
-  val viewSource: IterableView[Int, Set[Int]] = source.view
+  lazy val source: Set[Int] = (1 to size).toSet
+  lazy val viewSource: IterableView[Int, Set[Int]] = source.view
 
   @Benchmark
   def foldLeftAcc: Int = {
