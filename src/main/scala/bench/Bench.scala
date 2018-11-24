@@ -4,7 +4,8 @@ import java.util.concurrent.TimeUnit
 
 import org.openjdk.jmh.annotations._
 
-import scala.collection.{mutable, SeqView, IterableView}
+import scala.collection.mutable
+import scala.annotation.tailrec
 
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.Throughput))
@@ -28,7 +29,7 @@ import scala.collection.{mutable, SeqView, IterableView}
 )
 abstract class Bench
 
-trait Input { self: Bench =>
+trait Input { _: Bench =>
   @Param(Array("10", "100", "500"))
   var size: Int = _
 }
@@ -39,8 +40,7 @@ class IteratorAccumulateBench extends Bench with Input {
 
   @Benchmark
   def recursiveAcc: Int = {
-    @annotation.tailrec
-    def loop(it: Iterator[Int], acc: Int): Int =
+    @tailrec def loop(it: Iterator[Int], acc: Int): Int =
       if (!it.hasNext) acc else loop(it, acc + it.next)
     loop(source, 0)
   }
@@ -69,12 +69,10 @@ class IteratorAccumulateBench extends Bench with Input {
 class ListAccumulateBench extends Bench with Input {
 
   lazy val source: List[Int] = List.range(1, size)
-  lazy val viewSource: SeqView[Int, List[Int]] = source.view
 
   @Benchmark
   def recursiveAcc: Int = {
-    @annotation.tailrec
-    def loop(xs: List[Int], acc: Int): Int =
+    @tailrec def loop(xs: List[Int], acc: Int): Int =
       xs match {
         case h +: t => loop(t, acc + h)
         case _      => acc
@@ -91,25 +89,6 @@ class ListAccumulateBench extends Bench with Input {
   def foreachAcc: Int = {
     var acc = 0
     source.foreach(acc += _)
-    acc
-  }
-
-  @Benchmark
-  def foldLeftAccByView: Int = {
-    viewSource.foldLeft(0) { case (l, r) => l + r }
-  }
-
-  @Benchmark
-  def foreachAccByView: Int = {
-    var acc = 0
-    viewSource.foreach(acc += _)
-    acc
-  }
-
-  @Benchmark
-  def foreachAccByIter: Int = {
-    var acc = 0
-    source.iterator.foreach(acc += _)
     acc
   }
 }
@@ -117,12 +96,10 @@ class ListAccumulateBench extends Bench with Input {
 class VectorAccumulateBench extends Bench with Input {
 
   lazy val source: Vector[Int] = Vector.range(1, size)
-  lazy val viewSource: SeqView[Int, Vector[Int]] = source.view
 
   @Benchmark
   def recursiveAcc: Int = {
-    @annotation.tailrec
-    def loop(xs: Vector[Int], acc: Int): Int =
+    @tailrec def loop(xs: Vector[Int], acc: Int): Int =
       xs match {
         case h +: t => loop(t, acc + h)
         case _      => acc
@@ -141,36 +118,15 @@ class VectorAccumulateBench extends Bench with Input {
     source.foreach(acc += _)
     acc
   }
-
-  @Benchmark
-  def foldLeftAccByView: Int = {
-    viewSource.foldLeft(0) { case (l, r) => l + r }
-  }
-
-  @Benchmark
-  def foreachAccByView: Int = {
-    var acc = 0
-    viewSource.foreach(acc += _)
-    acc
-  }
-
-  @Benchmark
-  def foreachAccByIter: Int = {
-    var acc = 0
-    source.iterator.foreach(acc += _)
-    acc
-  }
 }
 
 class ArrayAccumulateBench extends Bench with Input {
 
   lazy val source: Array[Int] = Array.range(1, size)
-  lazy val viewSource: mutable.IndexedSeqView[Int,Array[Int]] = source.view
 
   @Benchmark
   def recursiveAcc: Int = {
-    @annotation.tailrec
-    def loop(i: Int, xs: Array[Int], acc: Int): Int =
+    @tailrec def loop(i: Int, xs: Array[Int], acc: Int): Int =
       if (i < source.length) loop(i + 1, xs, acc + xs(i)) else acc
     loop(0, source, 0)
   }
@@ -186,31 +142,11 @@ class ArrayAccumulateBench extends Bench with Input {
     source.foreach(acc += _)
     acc
   }
-
-  @Benchmark
-  def foldLeftAccByView: Int = {
-    viewSource.foldLeft(0) { case (l, r) => l + r }
-  }
-
-  @Benchmark
-  def foreachAccByView: Int = {
-    var acc = 0
-    viewSource.foreach(acc += _)
-    acc
-  }
-
-  @Benchmark
-  def foreachAccByIter: Int = {
-    var acc = 0
-    source.iterator.foreach(acc += _)
-    acc
-  }
 }
 
 class SetAccumulateBench extends Bench with Input {
 
   lazy val source: Set[Int] = (1 to size).toSet
-  lazy val viewSource: IterableView[Int, Set[Int]] = source.view
 
   @Benchmark
   def foldLeftAcc: Int = {
@@ -221,25 +157,6 @@ class SetAccumulateBench extends Bench with Input {
   def foreachAcc: Int = {
     var acc = 0
     source.foreach(acc += _)
-    acc
-  }
-
-  @Benchmark
-  def foldLeftAccByView: Int = {
-    viewSource.foldLeft(0) { case (l, r) => l + r }
-  }
-
-  @Benchmark
-  def foreachAccByView: Int = {
-    var acc = 0
-    viewSource.foreach(acc += _)
-    acc
-  }
-
-  @Benchmark
-  def foreachAccByIter: Int = {
-    var acc = 0
-    source.iterator.foreach(acc += _)
     acc
   }
 }

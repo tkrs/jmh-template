@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+local_java_version=
+
+if [ -f ".java-version" ]; then
+  local_java_version=$(cat .java-version)
+fi
+
+#jenv local "1.8"; java -version; sbt clean "jmh:run -prof gc -rf json -rff jmh-result/2.12.7-jdk1.8.json -o jmh-result/2.12.7-jdk1.8.txt"
+#jenv local "1.8"; java -version; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff jmh-result/2.13.0-M5-jdk1.8.json -o jmh-result/2.13.0-M5-jdk1.8.txt"
+#jenv local "11" ; java -version; sbt clean "jmh:run -prof gc -rf json -rff jmh-result/2.12.7-jdk11.json -o jmh-result/2.12.7-jdk11.txt"
+#jenv local "11"; java -version; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff jmh-result/2.13.0-M5-jdk11.json -o jmh-result/2.13.0-M5-jdk11.txt"
+#jenv local "openjdk64-1.8.0.192-graalvm-ce-1.0.0-rc9"; java -version; sbt clean "jmh:run -prof gc -rf json -rff jmh-result/2.12.7-graalvm-rc9.json -o jmh-result/2.12.7-graalvm-rc9.txt"
+jenv local "openjdk64-1.8.0.192-graalvm-ce-1.0.0-rc9"; java -version; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff jmh-result/2.13.0-M5-graalvm-rc9-jdk11.json -o jmh-result/2.13.0-M5-graalvm-rc9.txt"
+
+rm .java-version
+
+if [[ "${local_java_version}" != "" ]]; then
+  echo "${local_java_version}" > .java-version
+fi
