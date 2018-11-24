@@ -93,6 +93,33 @@ class ListAccumulateBench extends Bench with Input {
   }
 }
 
+class StreamAccumulateBench extends Bench with Input {
+
+  def source: Stream[Int] = Stream.range(1, size)
+
+  @Benchmark
+  def recursiveAcc: Int = {
+    @tailrec def loop(xs: Stream[Int], acc: Int): Int =
+      xs match {
+        case h +: t => loop(t, acc + h)
+        case _      => acc
+      }
+    loop(source, 0)
+  }
+
+  @Benchmark
+  def foldLeftAcc: Int = {
+    source.foldLeft(0) { case (l, r) => l + r }
+  }
+
+  @Benchmark
+  def foreachAcc: Int = {
+    var acc = 0
+    source.foreach(acc += _)
+    acc
+  }
+}
+
 class VectorAccumulateBench extends Bench with Input {
 
   lazy val source: Vector[Int] = Vector.range(1, size)
