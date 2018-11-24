@@ -6,17 +6,19 @@ if [ -f ".java-version" ]; then
   local_java_version=$(cat .java-version)
 fi
 
+rdir="jmh-result"
+
 jenv local "1.8"; java -version
-prefix="jmh-result/jdk1.8-2.12.7" sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-prefix="jmh-result/jdk1.8-2.13.0-M5" sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
+prefix="$rdir/jdk1.8-2.12.7"; sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
+prefix="$rdir/jdk1.8-2.13.0-M5"; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
 
 jenv local "11" ; java -version
-prefix="jmh-result/jdk11-2.12.7" sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-prefix="jmh-result/jdk11-2.13.0-M5" sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
+prefix="$rdir/jdk11-2.12.7"; sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
+prefix="$rdir/jdk11-2.13.0-M5"; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
 
 jenv local "openjdk64-1.8.0.192-graalvm-ce-1.0.0-rc9"
-prefix="jmh-result/graalvm-rc9-2.12.7" java -version; sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-prefix="jmh-result/graalvm-rc9-2.13.0-M5" java -version; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
+prefix="$rdir/graalvm-rc9-2.12.7"; java -version; sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
+prefix="$rdir/graalvm-rc9-2.13.0-M5"; java -version; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
 
 rm .java-version
 
