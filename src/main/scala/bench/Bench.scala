@@ -30,7 +30,7 @@ import scala.annotation.tailrec
 abstract class Bench
 
 trait Input { _: Bench =>
-  @Param(Array("10", "100", "500"))
+  @Param(Array("100", "500", "1000"))
   var size: Int = _
 }
 

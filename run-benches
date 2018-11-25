@@ -7,21 +7,20 @@ if [ -f ".java-version" ]; then
 fi
 
 rdir="jmh-result"
+sbt="sbt -Djline.terminal=jline.UnsupportedTerminal"
+jmh="jmh:run -prof gc -rf json"
 
-jenv local "1.8"; java -version
-prefix="$rdir/jdk1.8-2.12.7"; sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-prefix="$rdir/jdk1.8-2.13.0-M5"; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-
-jenv local "11" ; java -version
-prefix="$rdir/jdk11-2.12.7"; sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-prefix="$rdir/jdk11-2.13.0-M5"; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-
-jenv local "openjdk64-1.8.0.192-graalvm-ce-1.0.0-rc9"
-prefix="$rdir/graalvm-rc9-2.12.7"; java -version; sbt clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-prefix="$rdir/graalvm-rc9-2.13.0-M5"; java -version; sbt ++2.13.0-M5! clean "jmh:run -prof gc -rf json -rff $prefix.json -o $prefix.txt"
-
-rm .java-version
+for jdk_ver in "1.8" "11" "graalvm-ce-1.0.0-rc9"; do
+for scala_ver in "2.12.7" "2.13.0-M5"; do
+  jenv local "${jdk_ver}"
+  java -version
+  prefix="$rdir/$jdk_ver-$scala_ver"
+  ${sbt} ++${scala_ver}! clean "${jmh} -rff ${prefix}.json -o ${prefix}.txt"
+done
+done
 
 if [[ "${local_java_version}" != "" ]]; then
   echo "${local_java_version}" > .java-version
+else
+  rm .java-version
 fi
